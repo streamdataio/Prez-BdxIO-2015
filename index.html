@@ -96,7 +96,7 @@
 								<li>HTTP upgrade handshake</li>
 							</ul>
 							<pre>
-								<code  data-trim>
+								<code data-trim>
 GET /chat HTTP/1.1
 Host: example.com:8000
 Upgrade: websocket
@@ -109,6 +109,13 @@ Sec-WebSocket-Version: 13
 						<div class="col-md-6">
 							<h2>Server-Sent Events</h2>
 							<img alt="HTTP/1.1, what else?" src="img/http-what-else.jpg" class="fragment"/>
+							<pre class="fragment">
+								<code data-trim class="hljs http">
+GET /stream HTTP/1.1 1
+Host: example.com
+Accept: text/event-stream
+								</code>
+							</pre>
 						</div>
 					</div>
 				</section>
@@ -148,12 +155,12 @@ Sec-WebSocket-Version: 13
 							<div class="col-md-6">
 								<h2>WebSockets</h2>
 								<p>binary + text</p>
-								<p class="fragment">native support browsers</p>
+								<p class="fragment" data-fragment-index="1">native support browsers</p>
 							</div>
 							<div class="col-md-6">
 								<h2>Server-Sent Events</h2>
 								<p>text</p>
-								<table class="fragment">
+								<table class="fragment" data-fragment-index="2">
 									<thead>
 										<tr>
 											<th>API</th>
@@ -173,7 +180,7 @@ Sec-WebSocket-Version: 13
 											<td class="no-bottom-line">5.0</td>
 											<td class="no-bottom-line">11.5</td>
 										</tr>
-										<tr class="fragment">
+										<tr class="fragment" data-fragment-index="3">
 											<td class="no-bottom-line"></td>
 											<td class="no-bottom-line"></td>
 											<td class="no-bottom-line"></td>
@@ -182,14 +189,14 @@ Sec-WebSocket-Version: 13
 											</td>
 											<td class="no-bottom-line"></td>
 										</tr>
-										<tr class="fragment" valign="middle">
+										<tr class="fragment" data-fragment-index="3" valign="middle">
 											<td class="no-bottom-line" colspan="5">
 												<img alt="not supported" src="img/shocked.gif" width="70%"/>
 											</td>
 										</tr>
 									</tbody>
 								</table>
-								<p class="fragment">… but polyfills</p>
+								<p class="fragment" data-fragment-index="4">… but polyfills</p>
 							</div>
 						</div>
 					</section>
@@ -266,7 +273,6 @@ Sec-WebSocket-Version: 13
 						<div class="row">
 							<div class="col-md-6">
 								<h2>WebSockets</h2>
-								<p>Custom headers supported</p>
 							</div>
 							<div class="col-md-6">
 								<h2>Server-Sent Events</h2>
@@ -374,7 +380,7 @@ source.addEventListener('foo', function(e) {
 								</ul>
 								<img alt="Chat application" src="img/cat-computer.gif" height="200px" width="200px" class="fragment" data-fragment-index="1"/>
 							</p>
-							<p class="fragment" data-fragment-index="5">(*) WebRTC</p>
+							<p class="fragment" data-fragment-index="5" style="font-size: small;">(*) WebRTC might be even more suitable</p>
 						</div>
 						<div class="col-md-6">
 							<h2>Server-Sent Events</h2>
